@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: auto;
+    }
+    h1{
+        text-align: center;
+    }
+    form{
+        padding: 12px;
+        background-color: aqua;
+        border: 2px solid red;
+    }
+    div, input{
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>Fill the Form</h1>
+    <form action="backend.php"> 
+        <label for="name"></label>
+        <div>
+        Name: <input type="text" name="myName" id="name" placeholder="Enter Your Name">
+    </div>
+    <br>
+    <div>
+        Role: <input type="text" placeholder="Enter your Roll-No." name="myRole">
+    </div>
+    <br>
+    <div>
+        Email:  <input type="email" 
+        placeholder="name123@gmail.com"
+        name="myEmail">
+    </div>
+<br>
+<div>
+    Address: <input type="text" placeholder="Enter Your Address" name="mybonus">
+</div>
+<br>
+    <div>
+       DOB : <input type="Date" name="myDate">
+    </div>
+<br>
+    <div>
+Are you eligible <input type="checkbox" name="myeligibility" required>
+    </div>
+<br>
+<div>
+    gender:Male <input type="radio" name="mygender"> Female<input type="radio" name="mygender" > 
+    other<input type="radio" name="mygender">
+</div>
+<br> 
+<div>
+ write about yourself <br>  <textarea name="name" id="" cols="30" rows="10"></textarea>
+</div>
+<br>
+<div>
+    <label for="car">Car</label>
+    <select name="mycar" id="Car">
+<option value="bmw"selected>BMW</option>
+<option value="volvo"  >Volvo</option>
+    </select>
+</div>
+<br>
+<div>
+    <input type="submit" value="Submit Now">
+    <input type="reset" value="Reset Now">
+</div>
+    </form>
+</body>
+</html>
