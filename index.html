@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Knowledge of HTML </title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        margin: 10vh;
+      justify-content: center;
+      background-color: rgb(202, 250, 250);
+    }
+    .form{
+        height: 400px;
+        width:350px;
+        border: 2px solid red;
+        border-radius: 12px;
+        text-align: center;
+        background-color: rgb(135, 235, 235);
+        box-shadow: 12px 10px 10px  rgb(8, 82, 82);
+    }
+
+    .form h1{
+        margin: 12px;
+    }
+.form ::placeholder{
+    text-align: center;
+} 
+
+#btn{
+    font-size: 23px;
+    border: 2px solid rgb(9, 61, 61);
+    border-radius: 12px;
+    margin: 18px;
+    padding: 2px;
+    background-color:rgb(90, 223, 212);
+    cursor: pointer;
+    
+}
+
+#btn:hover{
+    background-color: rgb(134, 223, 223);
+}
+
+.form:hover{
+    background-color: aqua;
+}
+</style>
+<body>
+    
+    <form action="">
+        <div class="form">
+            <h1> Information Form</h1><br>
+            <div>
+            <label for="Name">Name :</label>
+            <input type="text" placeholder="Enter Your Name">
+           </div><br>
+
+
+            <div>
+            <label for="Name">Email :</label>
+            <input type="text" required placeholder="Enter Your Email">
+           </div><br>
+
+
+            <div>
+            <label for="cource">Course :</label>
+            <input type="text" placeholder="Enter Your Course">
+           </div><br>
+
+
+            <div>
+            <label for="roll" >Roll No. :</label>
+            <input type="text" placeholder="Enter Your Roll No." required>
+           </div><br>
+
+
+            <div>
+            <label for="phone">Phone No. :</label>
+            <input type="tel" placeholder="000 000 0000">
+           </div><br>
+
+
+            <div>
+            <label for="gender">Gender :</label>
+            <label for="male"> Male</label>
+            <input type="radio"  name="gender"  id="male">
+            <label for="female"> Female</label>
+            <input type="radio"  name="gender"  id="male">
+            <label for="other"> Others</label>
+            <input type="radio"  name="gender"  id="other">
+           </div><br>
+
+           <div>
+           <button type="Submit" id="btn">Submit</button>
+        </div>
+        </div>
+    </form>
+</body>
+</html>
