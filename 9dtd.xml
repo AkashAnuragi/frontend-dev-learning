@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE student SYSTEM "student.dtd">
+<student>
+<name>Akash</name>
+<address>Meerut</address>
+<std>B.tech</std>
+<marks>71%</marks>
+<name>Ayushi </name>
+<address>Ganga nagar</address>
+<std>Bsc</std>
+<marks>80%</marks>
+</student>
