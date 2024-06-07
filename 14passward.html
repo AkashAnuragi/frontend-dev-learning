@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Password</title>
+ <script type="text/javascript">
+ function myFunc(){
+ var mypwd = document.getElementById("pwd");
+ var myrepwd = document.getElementById("repwd");
+ 
+ if(mypwd.value === "") {
+ alert("You have not entered the password");
+ mypwd.focus();
+ return false;
+ } 
+ if(mypwd.value !== myrepwd.value) {
+ alert("Password not verified. Re-enter the password");
+ myrepwd.focus();
+ myrepwd.select();
+ return false;
+ } else {
+ alert("Great!! Password verified");
+ return true;
+ }
+ }
+ </script>
+</head>
+<body>
+ <form method="post" id="form1" onsubmit="return myFunc()">
+ <label>Enter your Password<input type="password" name="password" placeholder="Enter Password" id="pwd"></label><br><br>
+ <label>Re-enter your Password<input type="password" name="password" placeholder="Re-Enter Password" id="repwd" onblur="myFunc()"></label><br><br>
+ <input type="submit" name="submit" value="Submit">
+ <input type="reset" name="reset" value="Reset">
+ </form>
+</body>
+</html>
