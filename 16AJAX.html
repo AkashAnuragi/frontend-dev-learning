@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>AJAX</title>
+ <script type="text/javascript">
+ function myFunc(){
+ var req;
+ if(window.XMLHttpRequest) {
+ req = new XMLHttpRequest();
+ } else {
+ req = new ActiveXObject("Microsoft.XMLHTTP");
+ }
+ req.onreadystatechange = function() {
+ if(req.readyState === 4 && req.status === 200) {
+ document.getElementById("myID").innerHTML = req.responseText;
+ }
+ }
+ req.open("GET", "data.txt", true);
+ req.send();
+ }
+ </script>
+</head>
+<body>
+ <div id="myID">Akash Anuragi</div>
+ <button type="button" onclick="myFunc()">Change</button>
+</body>
+</html>
