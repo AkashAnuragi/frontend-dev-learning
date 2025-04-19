@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎉 Emoji Generator with Generator Function</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    #emoji {
+      font-size: 60px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎈 Random Emoji Generator</h1>
+  <button onclick="showNextEmoji()">Show Next Emoji</button>
+  <div id="emoji">🤔</div>
+
+  <script>
+    const emojiList = ['😀', '😎', '🥳', '🤖', '👻', '🐶', '🍕', '🚀', '🎯', '🌈', '🔥'];
+
+    function* emojiGenerator() {
+      let index = 0;
+      while (true) {
+        yield emojiList[index % emojiList.length];
+        index++;
+      }
+    }
+
+    const generator = emojiGenerator();
+
+    function showNextEmoji() {
+      const nextEmoji = generator.next().value;
+      document.getElementById("emoji").textContent = nextEmoji;
+    }
+  </script>
+</body>
+</html>
